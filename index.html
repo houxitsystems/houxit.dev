@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Houxit.js — The Transparent Web Framework for Perfectionists</title>
+<title>Houxit.js — The Transparent footprint for modern web apps</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -995,9 +995,9 @@
           <div class="code-dot"></div>
           <div class="code-dot"></div>
         </div>
-        <span class="code-filename">App.hx</span>
+        <span class="code-filename">App.houxit</span>
       </div>
-      <pre><span class="tok-kw">import</span> { <span class="tok-fn">createApp</span>, reactive } <span class="tok-kw">from</span> <span class="tok-str">'houxit'</span>
+      <pre><span class="tok-kw">import</span> { <span class="tok-fn">initBuild</span>, stream, useModel } <span class="tok-kw">from</span> <span class="tok-str">'houxit'</span>
 
 <span class="tok-cmt">// Transparent by design</span>
 <span class="tok-kw">const</span> <span class="tok-fn">state</span> = <span class="tok-fn">reactive</span>({
@@ -1006,8 +1006,8 @@
 })
 
 <span class="tok-kw">export default</span> {
-  <span class="tok-fn">setup</span>() {
-    <span class="tok-kw">return</span> { state }
+  <span class="tok-fn">build</span>() {
+    <span class="tok-kw">return</span> useModel({ state });
   }
 }
 </pre>
